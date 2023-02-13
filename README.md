@@ -27,7 +27,7 @@ Here are the packages that we have used:
 ## Description of the method
 The objective of our project is to train different Neural Network models without using backpropagation, for this we use the forward AD mode.         
 In general what we do is:         
-Initialize the model parameters and compute the initial loss         
+Initialize the model parameters and compute the initial loss (cross entropy)        
 Until the loss is lower than a threshold we:
 <ul>
 <li>Define a perturbation vector for each parameter taken as a multivariate random variable (such that their scalar components are independent and have zero mean and unit variance)</li>
