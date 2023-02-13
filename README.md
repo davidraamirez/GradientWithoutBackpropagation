@@ -16,7 +16,7 @@ Here are the packages that we have used:
 *from torchvision import transforms as T*: to convert the KMNIST dataset to tensors       
 *from matplotlib import pyplot as plt*: to plot the evolution of the loss, the accuracy and the misclassifications of the model      
 
-*from torch import nn*       
+*from torch import nn* : to define our models      
 *from torch.nn import functional as F*: to use activation functions      
 
 *import functorch as fc*         
