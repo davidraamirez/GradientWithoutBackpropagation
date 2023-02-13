@@ -7,25 +7,29 @@ For the Convolutional Neural Network model we have used the KMNIST dataset becau
 ## Installations
 Here are the packages that we have used:
 
-*import torch*
-*import tensorflow_datasets as tfds*    to import the penguins dataset 
-*from sklearn.model_selection import train_test_split*    to separate the dataset into train data and test data 
+*import torch*\n
+*import tensorflow_datasets as tfds*    to import the penguins dataset\n
+*from sklearn.model_selection import train_test_split*    to separate the dataset into train data and test data\n
 
-*import torchvision*
-*from torchvision import transforms as T*   to convert the KMNIST dataset to tensors
-*from matplotlib import pyplot as plt*    to plot the evolution of the loss, the accuracy and the misclassifications of the model
+*import torchvision*\n
+*from torchvision import transforms as T*   to convert the KMNIST dataset to tensors\n
+*from matplotlib import pyplot as plt*    to plot the evolution of the loss, the accuracy and the misclassifications of the model\n
 
-*from torch import nn*
-*from torch.nn import functional as F*    to use activation functions
+*from torch import nn*\n
+*from torch.nn import functional as F*    to use activation functions\n
 
-*import functorch as fc*
-*from functorch import jvp*   to compute the jacobian multiplied by a tengent vector
-*from functools import partial*   to compute the jacobian
+*import functorch as fc*\n
+*from functorch import jvp*   to compute the jacobian multiplied by a tengent vector\n
+*from functools import partial*   to compute the jacobian\n
 
 *import time*   to compute the execution time of the training
 ## Description of the method
 The objective of our project is to train different Neural Network models without using backpropagation, for this we use the forwar AD mode.
 In general what we do is:
-Initialize the model parameters and compute the initial loss
-Until the loss is lower than a threshold we:
-
+  Initialize the model parameters and compute the initial loss
+  Until the loss is lower than a threshold we:
+  Define a perturbation vector for each parameter taken as a multivariate random variable (such that their scalar components are independent and have zero mean and unit variance)
+  Compute the loss and the directional derivative of the loss at each parameter in direction v simultaneously and without having to compute ∇loss in the process (forward-mode autodiff)
+  Multiply the scalar directional derivative ∇loss(θ)·v with vector v and obtain g(θ), the forward gradient (where θ represents each one of the parameters)
+  Update the parameters by substracting g(θ) multiplied by the learning rate
+  Recalculate the loss
