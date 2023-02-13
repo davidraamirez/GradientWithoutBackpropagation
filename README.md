@@ -9,7 +9,7 @@ For the Convolutional Neural Network model we have used the KMNIST dataset becau
 Here are the packages that we have used:    
 
 *import torch*       
-*import tensorflow_datasets as tfds*      to import the penguins dataset      
+*import tensorflow_datasets as tfds*  to import the penguins dataset      
 *from sklearn.model_selection import train_test_split*      to separate the dataset into train data and test data      
 
 *import torchvision*        
