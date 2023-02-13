@@ -29,10 +29,10 @@ The objective of our project is to train different Neural Network models without
 In general what we do is:         
 Initialize the model parameters and compute the initial loss         
 Until the loss is lower than a threshold we:
-<ol>
+<ul>
 <li>Define a perturbation vector for each parameter taken as a multivariate random variable (such that their scalar components are independent and have zero mean and unit variance)</li>
 <li>Compute the loss and the directional derivative of the loss at each parameter in direction v simultaneously and without having to compute ∇loss in the process (forward-mode autodiff)</li>
 <li>Multiply the scalar directional derivative ∇loss(θ)·v with vector v and obtain g(θ), the forward gradient (where θ represents each one of the parameters)</li>
 <li>Update the parameters by substracting g(θ) multiplied by the learning rate</li>
 <li>Recalculate the loss</li>
-</ol>  
+</ul>  
