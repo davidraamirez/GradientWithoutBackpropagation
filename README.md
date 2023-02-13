@@ -3,7 +3,7 @@
 We have created six different classes, every pair has implemented a Neural Network which we train with forward gradient in one of them and with backpropagation in the other one.     
 We train a Logistic Regression model, a Multilayer Neural Network model and a Convolutional Neural Network model.
 ## Datasets used
-For the Logistic Regression model and the MultiLayer Regression model we use the dataset 'penguins' from tensorflow.datasets (https://www.tensorflow.org/datasets/catalog/penguins?hl=es-419). To separate the data into the train and test data, we use train_test_split from sklearn.model_selection and then we have converted the inputs to type float and the targets to type long.      
+For the Logistic Regression model and the MultiLayer Neural Network model we use the dataset 'penguins' from tensorflow.datasets (https://www.tensorflow.org/datasets/catalog/penguins?hl=es-419). To separate the data into the train and test data, we use train_test_split from sklearn.model_selection and then we have converted the inputs to type float and the targets to type long.      
 For the Convolutional Neural Network model we have used the KMNIST dataset because we needed a dataset of 2-dimensional features to apply a convoultional 2d layer, although we have only picked 500 samples for the training set and 100 for the test set for higher speed. We have transofrmed the data to tensors to work with them and have used the data loader to obtain an iterator to access to the samples.
 ## Installations
 Here are the packages that we have used:    
