@@ -7,25 +7,25 @@ For the Convolutional Neural Network model we have used the KMNIST dataset becau
 ## Installations
 Here are the packages that we have used:
 
-"import torch"
-"import tensorflow_datasets as tfds"    to import the penguins dataset 
-"from sklearn.model_selection import train_test_split"    to separate the dataset into train data and test data 
+*import torch*
+*import tensorflow_datasets as tfds*    to import the penguins dataset 
+*from sklearn.model_selection import train_test_split*    to separate the dataset into train data and test data 
 
-"%pip install torchmetrics --quiet"
+*import torchvision*
+*from torchvision import transforms as T*   to convert the KMNIST dataset to tensors
+*from matplotlib import pyplot as plt*    to plot the evolution of the loss, the accuracy and the misclassifications of the model
 
-"import torchmetrics"
-"import torchvision"
-"from torchvision import transforms as T"   to convert the KMNIST dataset to tensors
-"from matplotlib import pyplot as plt"    to plot the evolution of the loss, the accuracy and the misclassifications of the model
+*from torch import nn*
+*from torch.nn import functional as F*    to use activation functions
 
+*import functorch as fc*
+*from functorch import jvp*   to compute the jacobian multiplied by a tengent vector
+*from functools import partial*   to compute the jacobian
 
-"from torch import nn"
-"from torch.nn import functional as F"    to use activation functions
-
-
-"import functorch as fc"
-"from functorch import jvp"   to compute the jacobian multiplied by a vector
-"from functools import partial" 
-
-"import time"   to compute the execution time of the training
+*import time*   to compute the execution time of the training
 ## Description of the method
+The objective of our project is to train different Neural Network models without using backpropagation, for this we use the forwar AD mode.
+In general what we do is:
+Initialize the model parameters and compute the initial loss
+Until the loss is lower than a threshold we:
+
