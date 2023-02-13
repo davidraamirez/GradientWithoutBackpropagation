@@ -25,7 +25,7 @@ Here are the packages that we have used:
 
 *import time*      to compute the execution time of the training
 ## Description of the method
-The objective of our project is to train different Neural Network models without using backpropagation, for this we use the forwar AD mode.         
+The objective of our project is to train different Neural Network models without using backpropagation, for this we use the forward AD mode.         
 In general what we do is:         
 Initialize the model parameters and compute the initial loss         
 Until the loss is lower than a threshold we:
