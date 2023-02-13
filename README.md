@@ -13,17 +13,17 @@ Here are the packages that we have used:
 *from sklearn.model_selection import train_test_split*      to separate the dataset into train data and test data      
 
 *import torchvision*        
-*from torchvision import transforms as T*   to convert the KMNIST dataset to tensors       
-*from matplotlib import pyplot as plt*    to plot the evolution of the loss, the accuracy and the misclassifications of the model      
+*from torchvision import transforms as T*      to convert the KMNIST dataset to tensors       
+*from matplotlib import pyplot as plt*      to plot the evolution of the loss, the accuracy and the misclassifications of the model      
 
 *from torch import nn*       
-*from torch.nn import functional as F*    to use activation functions      
+*from torch.nn import functional as F*      to use activation functions      
 
 *import functorch as fc*         
-*from functorch import jvp*   to compute the jacobian multiplied by a tengent vector         
-*from functools import partial*   to compute the jacobian       
+*from functorch import jvp*      to compute the jacobian multiplied by a tengent vector         
+*from functools import partial*      to compute the jacobian       
 
-*import time*   to compute the execution time of the training
+*import time*      to compute the execution time of the training
 ## Description of the method
 The objective of our project is to train different Neural Network models without using backpropagation, for this we use the forwar AD mode.         
 In general what we do is:         
